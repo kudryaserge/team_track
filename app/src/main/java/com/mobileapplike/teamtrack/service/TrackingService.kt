@@ -171,7 +171,7 @@ class TrackingService : LifecycleService() {
                 val request = LocationRequest().apply {
                     interval = LOCATION_UPDATE_INTERVAL
                     fastestInterval = FASTEST_LOCATION_INTERVAL
-                    priority = LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
+                    priority = LocationRequest.PRIORITY_HIGH_ACCURACY
                 }
                 fusedLocationProviderClient.requestLocationUpdates(
                         request,

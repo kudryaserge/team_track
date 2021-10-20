@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "525451973331",
+    "firebase_url": "https://teamtrack-a5b43-default-rtdb.firebaseio.com",
     "project_id": "teamtrack-a5b43",
     "storage_bucket": "teamtrack-a5b43.appspot.com"
   },

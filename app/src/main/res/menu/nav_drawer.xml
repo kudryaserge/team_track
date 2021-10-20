@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/my_team"
+                android:icon="@drawable/my_group"
+                android:title="@string/my_team"/>
+            <item
+                android:id="@+id/join_the_master"
+                android:icon="@drawable/join_the_master"
+                android:title="@string/join_the_foreman"/>
+            <item
+                android:id="@+id/leave_the_foreman"
+                android:icon="@drawable/leave_group"
+                android:title="@string/leave_the_foreman"/>
+            <item
+                android:id="@+id/share_my_grpup"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share_my_group"/>
+
+            <item
+                android:id="@+id/close_my_own_group"
+                android:icon="@drawable/close"
+                android:title="@string/close_my_own_group"/>
+            <item
+                    android:id="@+id/setNickName"
+                    android:icon="@drawable/ic_edit_black_24dp"
+                    android:title="@string/change_nick_name"/>
+            <item
+                    android:id="@+id/signOut"
+                    android:icon="@drawable/ic_exit_to_app_black_24dp"
+                    android:title="@string/close_app"/>
+
+        </menu>
+    </item>
+
+</menu>

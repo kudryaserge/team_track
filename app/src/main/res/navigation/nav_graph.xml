@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.mobileapplike.teamtrack.ui.fragments.map.MapFragment"
+        android:label="map_fragment"
+        tools:layout="@layout/map_fragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_joinTheMaster"
+            app:destination="@id/joinTheMaster" />
+        <action
+            android:id="@+id/action_mapFragment_to_myGroupForemansFragment"
+            app:destination="@id/myGroupForemansFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_followersFragment"
+            app:destination="@id/followersFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_shareGroupIDFragment"
+            app:destination="@id/shareGroupIDFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mobileapplike.teamtrack.ui.fragments.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <argument
+            android:name="token"
+            app:argType="string"
+            android:defaultValue=" " />
+        <argument
+            android:name="nickName"
+            app:argType="string"
+            android:defaultValue=" " />
+        <action
+            android:id="@+id/action_loginFragment_to_shareGroupIDFragment"
+            app:destination="@id/shareGroupIDFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinTheMaster"
+        android:name="com.mobileapplike.teamtrack.ui.fragments.jointhemaster.JoinTheMaster"
+        android:label="JoinTheMaster" >
+        <action
+            android:id="@+id/action_joinTheMaster_to_shareGroupIDFragment"
+            app:destination="@id/shareGroupIDFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myGroupForemansFragment"
+        android:name="com.mobileapplike.teamtrack.ui.fragments.mygroupforeman.MyGroupForemansFragment"
+        android:label="my_group_foremans_fragment"
+        tools:layout="@layout/my_group_foremans_fragment" />
+    <fragment
+        android:id="@+id/followersFragment"
+        android:name="com.mobileapplike.teamtrack.ui.fragments.followers.FollowersFragment"
+        android:label="followers_fragment"
+        tools:layout="@layout/followers_fragment" >
+        <action
+            android:id="@+id/action_followersFragment_to_shareGroupIDFragment"
+            app:destination="@id/shareGroupIDFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareGroupIDFragment"
+        android:name="com.mobileapplike.teamtrack.ui.fragments.shareGroupId.ShareGroupIdFragment"
+        android:label="share_group_id_fragment"
+        tools:layout="@layout/share_group_id_fragment" />
+
+</navigation>

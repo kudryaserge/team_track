@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "525451973331",
+    "project_id": "teamtrack-a5b43",
+    "storage_bucket": "teamtrack-a5b43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525451973331:android:4c542c281b908ca1353a26",
+        "android_client_info": {
+          "package_name": "com.mobileapplike.teamtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525451973331-altvfaq07hl9da3a1k1ld6md6o5mmbo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtdRhxNuTHkCxvPCmxdO5AhpZSqA-p2hY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525451973331-altvfaq07hl9da3a1k1ld6md6o5mmbo6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525451973331-gkqad652ok3g9p7m1u5jp2csa2huvukc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobileapplike.teamtrack"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

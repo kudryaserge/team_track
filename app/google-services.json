@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "525451973331-5h7gs38gcqp1kh0n0t8qlj25rrm8nebo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileapplike.teamtrack",
+            "certificate_hash": "841a366720bd55616d1f18dbc7b96919c0ecbf70"
+          }
+        },
+        {
+          "client_id": "525451973331-g3v59dsaovn52m6gm11qi8jpp36p20dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileapplike.teamtrack",
+            "certificate_hash": "c8da79ed6b6985ddd1ca7e9d555f8ec02ece1bbc"
+          }
+        },
+        {
           "client_id": "525451973331-altvfaq07hl9da3a1k1ld6md6o5mmbo6.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -192,7 +192,9 @@ class TrackingService : LifecycleService() {
                     for (location in locations) {
                         addPathPoint(location)
                         Timber.d("NEW LOCATION: ${location.latitude}, ${location.longitude}")
-                        FirebaseDB.saveLocation(location.latitude.toString(), location.longitude.toString())
+                        FirebaseDB.saveLocation(location.latitude.toString(), location.longitude.toString()){
+                            Timber.d(it)
+                        }
                     }
                 }
             }

@@ -29,7 +29,7 @@ object FirebaseDB {
         token = FirebaseMessaging.getInstance().token.await().toString()
     }
 
-    fun saveLocation(latitude: String, longitude: String) = CoroutineScope(Dispatchers.IO).launch {
+    fun saveLocation(latitude: String, longitude: String, errorMessage: (String?) -> Unit) = CoroutineScope(Dispatchers.IO).launch {
         val currentlatitude = latitude.toFloat()
         val currentlongitude = longitude.toFloat()
 
@@ -42,8 +42,13 @@ object FirebaseDB {
         newPersonMap["latitude"] = latitude
         newPersonMap["longitude"] = longitude
         updatePerson(token, newPersonMap) {
-            lastLatitude = latitude.toFloat()
-            lastLongitude = longitude.toFloat()
+            if (it.isNullOrBlank()){
+                lastLatitude = latitude.toFloat()
+                lastLongitude = longitude.toFloat()
+            } else {
+                errorMessage(it)
+            }
+
         }
     }
 

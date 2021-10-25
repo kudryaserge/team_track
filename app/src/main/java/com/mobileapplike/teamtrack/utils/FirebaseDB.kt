@@ -33,8 +33,8 @@ object FirebaseDB {
         val currentlatitude = latitude.toFloat()
         val currentlongitude = longitude.toFloat()
 
-        if (max(lastLatitude - currentlatitude, currentlatitude - lastLatitude) < 0.001
-                || max(lastLongitude - currentlongitude,  currentlongitude - lastLongitude) < 0.001){
+        if (max(lastLatitude - currentlatitude, currentlatitude - lastLatitude) < 0.0005
+                || max(lastLongitude - currentlongitude,  currentlongitude - lastLongitude) < 0.0005){
             return@launch
         }
 
@@ -91,6 +91,10 @@ object FirebaseDB {
     }
 
     fun getPerson(errorMessage: (String?) -> Unit, onSuccess: (Person?) -> Unit) = CoroutineScope(Dispatchers.IO).launch {
+        if (!::token.isInitialized){
+            getToken()
+        }
+
         try {
             val querySnapshot = personCollectionRef
                 .whereEqualTo("token", token)

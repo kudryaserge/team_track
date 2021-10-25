@@ -16,6 +16,7 @@
         mapbox:layout_constraintStart_toStartOf="parent"
         mapbox:layout_constraintTop_toTopOf="parent"
         mapbox:mapbox_locationComponentEnabled="true"
+
         tools:context=".MainActivity" />
 
 

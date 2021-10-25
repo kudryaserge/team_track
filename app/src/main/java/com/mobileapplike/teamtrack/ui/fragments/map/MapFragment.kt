@@ -36,6 +36,7 @@ import com.mapbox.maps.extension.style.sources.addSource
 import com.mapbox.maps.extension.style.sources.generated.GeoJsonSource
 import com.mapbox.maps.plugin.animation.MapAnimationOptions.Companion.mapAnimationOptions
 import com.mapbox.maps.plugin.animation.flyTo
+import com.mapbox.maps.plugin.gestures.addOnMapClickListener
 import com.mapbox.maps.plugin.gestures.gestures
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorPositionChangedListener
 import com.mapbox.maps.plugin.locationcomponent.location
@@ -212,7 +213,6 @@ class MapFragment : BaseFragment() , EasyPermissions.PermissionCallbacks, Naviga
             mapView?.getMapboxMap()?.setCamera(
                 CameraOptions.Builder()
                     .center(it)
-
                     .zoom(16.0)
                     .build()
             )
@@ -222,7 +222,7 @@ class MapFragment : BaseFragment() , EasyPermissions.PermissionCallbacks, Naviga
         lastPosition = it
 
         // Set the gestures plugin's focal point to the current indicator location.
-        mapView?.gestures?.focalPoint = mapView?.getMapboxMap()?.pixelForCoordinate(it)
+        //mapView?.gestures?.focalPoint = mapView?.getMapboxMap()?.pixelForCoordinate(it)
 
     }
 
@@ -323,6 +323,9 @@ class MapFragment : BaseFragment() , EasyPermissions.PermissionCallbacks, Naviga
 
                 }
             })
+
+
+
 
 
         viewModel.retrievePersons() {

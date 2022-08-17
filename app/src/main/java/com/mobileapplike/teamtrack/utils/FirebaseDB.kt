@@ -18,7 +18,7 @@ import kotlin.math.max
 
 object FirebaseDB {
     lateinit var person: Person
-    lateinit var token: String
+    public lateinit var token: String
     var lastLatitude : Float = 0.0f
     var lastLongitude  : Float= 0.0f
 
@@ -91,8 +91,9 @@ object FirebaseDB {
     }
 
     fun getPerson(errorMessage: (String?) -> Unit, onSuccess: (Person?) -> Unit) = CoroutineScope(Dispatchers.IO).launch {
-        if (!::token.isInitialized){
-            getToken()
+
+        if(!::token.isInitialized) {
+            token = FirebaseMessaging.getInstance().token.await().toString()
         }
 
         try {

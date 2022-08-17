@@ -473,6 +473,8 @@ class MapFragment : BaseFragment() , EasyPermissions.PermissionCallbacks, Naviga
 
     fun showPersons(){
         Log.d("showPersons", "showPersons")
+
+
         FirebaseDB.getPerson({
             viewModel.message.postValue(it)
         }, {
@@ -606,6 +608,7 @@ class MapFragment : BaseFragment() , EasyPermissions.PermissionCallbacks, Naviga
 
         mainHandler.removeCallbacks(myRunnable);
         mainHandler.post(myRunnable)
+        first = true
     }
 
     override fun onStop() {
